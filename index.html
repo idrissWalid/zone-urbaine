@@ -298,9 +298,6 @@
             const voteButtons = document.querySelectorAll('.btn-vote');
             voteButtons.forEach((button, index) => {
                 button.addEventListener('click', (e) => {
-                    // Génère le code USSD pour le candidat (index+1)
-                    const ussdCode = `*144*2*1*55713380*100*${index+1}#`;
-                    alert(`Pour voter pour ce candidat, composez le code USSD suivant :\n${ussdCode}`);
                     // Optionnel : feedback visuel temporaire
                     button.textContent = 'Voté !';
                     button.classList.remove('bg-amber-500', 'hover:bg-amber-400');
